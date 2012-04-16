@@ -1,0 +1,15 @@
+{
+  "author": "Ryan Dick <noxinoobin@gmail.com>",
+  "name": "vmstatjs",
+  "version": "0.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "0.7.x",
+    "express": "2.5.x"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

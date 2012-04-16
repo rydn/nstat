@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<title>nstat</title>
+	<style type="text/css">
+	  body {background:#111; color:#eee; font-size:80%; font-family:monospace;}
+	  h1 {font-size:200%; font-weight:bold; text-shadow:1px 1px 0 #666;}
+	  h1 span {font-size:60%; color:#999; text-shadow:0 0 0 #666;}
+	  h2 {font-size:110%; text-shadow:1px 1px 0 #333;}
+	  a {color:#e66;}
+	  .about h2 {font-size:125%;}
+	  blockquote {margin:20px 20px;}
+	  pre {white-space:pre-wrap;}
+	  .about {margin-top:2em;}
+	  .mini {float:left; margin-right:10px;}
+	  .multi {overflow:hidden;}
+	  .wrap {width:610px; padding:5px 10px; margin:0 auto;}
+	</style>
+  </head>
+  <body>
+	<div class="wrap">
+	  <header>
+		<h1>nstat <span>realtime server monitor</span></h1>
+	  </header>
+
+	  <div>
+		<h2>cpu:</h2>
+		<canvas id="cpu" width="800" height="150"></canvas>
+		<div id="cpu-stat"></div>
+	  </div>
+
+	  <div>
+		<h2>memory:</h2>
+		<canvas id="memory" width="800" height="150"></canvas>
+		<div id="memory-stat"></div>
+	  </div>
+
+	  <div class="multi">
+		<div class="mini">
+		  <h2>procs:</h2>
+		  <canvas id="procs" width="220" height="150"></canvas>
+		  <div id="procs-stat"></div>
+		</div>
+		<div class="mini">
+		  <h2>io:</h2>
+		  <canvas id="io" width="220" height="150"></canvas>
+		  <div id="io-stat"></div>
+		</div>
+		<div class="mini">
+		  <h2>system:</h2>
+		  <canvas id="system" width="220" height="150"></canvas>
+		  <div id="system-stat"></div>
+		</div>
+		<div class="mini">
+		  <h2>swap:</h2>
+		  <canvas id="swap" width="220" height="150"></canvas>
+		  <div id="swap-stat"></div>
+		</div>
+	  </div>
+	</div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://<%= host %>:<%= ioport %>/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/js/smoothie.js"></script>
+	<script type="text/javascript" src="/js/monitor.js"></script>
+  </body>
+</html>
